@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <!--
+  CMRU-13 · Rutas MEMO · Rumbo a la Universidad
+  © 2026 José Antonio León Juárez · EduTech Studio MEMO.
+  Uso educativo y no comercial. Todos los derechos reservados.
+  No se autoriza la venta, reventa, redistribución comercial, eliminación de créditos
+  ni presentación de esta herramienta, su código o sus materiales como producto propio
+  sin autorización expresa del autor.
+-->
+
+<!--
 CMRU-01b · Reintegración del León guía MEMO
 Base: LB-CMRU-1.0
 Referencia arquitectónica: index(3).html (Rutas MEMO)
@@ -398,8 +407,120 @@ hr{border:0;border-top:1px solid var(--borde);margin:20px 0}
 }
 
 </style>
+
+<style id="cmru13LegalCss">
+/* CMRU-13 · Origen del proyecto y términos de uso */
+.cmru13-overlay{
+  position:fixed;inset:0;z-index:10000;display:none;overflow:auto;
+  background:linear-gradient(135deg,rgba(15,38,56,.97),rgba(22,59,82,.97));
+  padding:20px;box-sizing:border-box;color:#1c2e3a;
+}
+.cmru13-overlay.activa{display:flex;align-items:flex-start;justify-content:center}
+.cmru13-panel{
+  width:min(860px,100%);margin:auto;background:#fff;border-radius:24px;
+  box-shadow:0 24px 70px rgba(0,0,0,.28);padding:clamp(22px,4vw,42px);
+  border:1px solid rgba(195,154,59,.34);position:relative
+}
+.cmru13-kicker{margin:0 0 5px;color:#8b6b1e;text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:900}
+.cmru13-panel h2{margin:0 0 14px;color:#0f2638;font-size:clamp(28px,5vw,42px);line-height:1.04}
+.cmru13-panel h3{color:#163b52;margin:22px 0 8px}
+.cmru13-frase{
+  margin:18px 0;padding:15px 18px;border-left:4px solid #c39a3b;
+  background:#fbf8f0;border-radius:0 14px 14px 0;font-size:clamp(17px,2.6vw,21px);font-style:italic
+}
+.cmru13-panel p,.cmru13-panel li{line-height:1.58}
+.cmru13-valores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.cmru13-valor{background:#edf3f6;border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.cmru13-letra{width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:50%;background:#163b52;color:white;font-weight:900}
+.cmru13-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:22px}
+.cmru13-actions button{min-width:170px}
+.cmru13-legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.cmru13-legal-box{border:1px solid #d7e1e7;border-radius:16px;padding:16px;background:#fafcfd}
+.cmru13-legal-box.permitido{border-top:4px solid #2f8f67}
+.cmru13-legal-box.no-permitido{border-top:4px solid #b84a4a}
+.cmru13-check{display:flex;gap:11px;align-items:flex-start;margin:20px 0;padding:15px;border-radius:14px;background:#f3f6f8;border:1px solid #d5e0e6}
+.cmru13-check input{width:20px;height:20px;margin-top:2px;flex:0 0 auto}
+.cmru13-version{color:#687780;font-size:12px;margin-top:12px}
+.cmru13-cerrar{display:none;position:absolute;right:16px;top:14px;border:0!important;background:transparent!important;color:#163b52!important;box-shadow:none!important;padding:8px!important;min-width:0!important;font-size:24px;line-height:1}
+.cmru13-cerrar.visible{display:block}
+.cmru13-terms-link{
+  border:0!important;background:transparent!important;color:rgba(255,255,255,.92)!important;
+  text-decoration:underline;text-underline-offset:3px;padding:2px 5px!important;margin:0!important;
+  min-width:0!important;font:inherit!important;box-shadow:none!important
+}
+.cmru13-terms-link:hover{color:#fff!important;background:transparent!important}
+body.cmru13-bloqueado{overflow:hidden}
+@media(max-width:680px){
+  .cmru13-overlay{padding:10px}.cmru13-panel{border-radius:18px;padding:22px 18px}
+  .cmru13-valores,.cmru13-legal-grid{grid-template-columns:1fr}
+  .cmru13-actions button{width:100%}
+}
+@media print{.cmru13-overlay{display:none!important}.cmru13-terms-link{display:none!important}}
+</style>
+
 </head>
 <body>
+
+<!-- CMRU-13 · Primera visita: origen y términos -->
+<div id="cmru13Origen" class="cmru13-overlay" role="dialog" aria-modal="true" aria-labelledby="cmru13OrigenTitulo">
+  <div class="cmru13-panel">
+    <p class="cmru13-kicker">Rutas MEMO · Rumbo a la Universidad</p>
+    <h2 id="cmru13OrigenTitulo">Una ruta que nace de una historia</h2>
+    <div class="cmru13-frase">“Yo siempre quise ir a la escuela, pero tenía que ir a recoger leña...”</div>
+    <p><strong>Rumbo a la Universidad</strong> nace de una convicción sencilla: la educación puede abrir caminos que transforman una vida y, con el tiempo, también la vida de otras personas.</p>
+    <p>Este proyecto está dedicado a la memoria de <strong>Guillermo León Rodríguez</strong>. De niño deseaba estudiar, pero las condiciones de su vida lo llevaron a trabajar desde muy temprana edad. Más tarde, cuando le tocó ser padre, hizo cuanto estuvo en sus manos para que sus hijos sí pudieran estudiar y llegar a la universidad.</p>
+    <p>Ese esfuerzo se convierte hoy en una nueva forma de acompañamiento: una herramienta creada para que otros estudiantes puedan practicar, recuperar conocimientos, reconocer aquello que necesitan reforzar y seguir avanzando.</p>
+    <div class="cmru13-frase">“Gracias por abrirnos el camino. Mientras pueda enseñar, crear, compartir o ayudar a alguien a llegar un poco más lejos, pensaré que sigues caminando conmigo.”</div>
+    <h3>Los valores MEMO</h3>
+    <div class="cmru13-valores">
+      <div class="cmru13-valor"><span class="cmru13-letra">M</span><span><strong>Me comprometo</strong> con mi aprendizaje.</span></div>
+      <div class="cmru13-valor"><span class="cmru13-letra">E</span><span><strong>Exploro</strong> estrategias y procedimientos.</span></div>
+      <div class="cmru13-valor"><span class="cmru13-letra">M</span><span><strong>Mejoro</strong> a partir de mis errores.</span></div>
+      <div class="cmru13-valor"><span class="cmru13-letra">O</span><span><strong>Organizo</strong> mi avance hacia mis metas.</span></div>
+    </div>
+    <div class="cmru13-actions"><button type="button" onclick="cmru13ContinuarATerminos()">Continuar</button></div>
+  </div>
+</div>
+
+<div id="cmru13Terminos" class="cmru13-overlay" role="dialog" aria-modal="true" aria-labelledby="cmru13TerminosTitulo">
+  <div class="cmru13-panel">
+    <button id="cmru13CerrarTerminos" class="cmru13-cerrar" type="button" aria-label="Cerrar términos" onclick="cmru13CerrarTerminos()">×</button>
+    <p class="cmru13-kicker">Uso educativo y no comercial</p>
+    <h2 id="cmru13TerminosTitulo">Uso responsable de Rutas MEMO</h2>
+    <p><strong>Rutas MEMO · Rumbo a la Universidad</strong> es una herramienta de acompañamiento y nivelación matemática desarrollada por <strong>José Antonio León Juárez · EduTech Studio MEMO</strong>. Su acceso se ofrece para favorecer el aprendizaje, la práctica y la preparación matemática.</p>
+    <div class="cmru13-legal-grid">
+      <div class="cmru13-legal-box permitido">
+        <h3>Puedes</h3>
+        <ul>
+          <li>Utilizar la herramienta para tu aprendizaje personal.</li>
+          <li>Utilizarla como docente para acompañar a tus estudiantes.</li>
+          <li>Compartir el enlace oficial con fines educativos.</li>
+          <li>Usarla en actividades educativas, siempre que no se cobre específicamente por el acceso a la herramienta ni se presente como un producto propio.</li>
+        </ul>
+      </div>
+      <div class="cmru13-legal-box no-permitido">
+        <h3>No puedes</h3>
+        <ul>
+          <li>Vender, revender o cobrar por el acceso a Rutas MEMO.</li>
+          <li>Integrarla en cursos, plataformas, paquetes o productos comerciales presentándola como propia.</li>
+          <li>Copiar, redistribuir, modificar o reutilizar el código, materiales, identidad visual o recursos con fines comerciales sin autorización expresa del autor.</li>
+          <li>Eliminar, ocultar o sustituir los créditos de autoría.</li>
+          <li>Usar el nombre o identidad MEMO para promocionar productos o servicios comerciales sin autorización.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="notice"><strong>Recuerda.</strong> Esta ruta es una herramienta de <strong>acompañamiento, nivelación y práctica</strong>. Sus resultados no constituyen una certificación de dominio ni predicen el ingreso a una universidad.</div>
+    <label id="cmru13CheckWrap" class="cmru13-check" for="cmru13Acepto">
+      <input id="cmru13Acepto" type="checkbox" onchange="cmru13ActualizarBoton()">
+      <span><strong>He leído y acepto los términos de uso de Rutas MEMO.</strong></span>
+    </label>
+    <div class="cmru13-actions">
+      <button id="cmru13AceptarBtn" type="button" onclick="cmru13AceptarTerminos()" disabled>Aceptar y continuar</button>
+    </div>
+    <p class="cmru13-version">Términos de uso · Versión 1.0 · © 2026 José Antonio León Juárez · EduTech Studio MEMO · Todos los derechos reservados.</p>
+  </div>
+</div>
+
 <header class="memo-header">
   <div class="memo-header-inner memo-header-text-only">
     <div class="memo-header-copy">
@@ -1092,11 +1213,12 @@ hr{border:0;border-top:1px solid var(--borde);margin:20px 0}
 <footer class="memo-creditos-globales" aria-label="Cintilla de identidad MEMO">
   <div>Sistemas inteligentes y adaptativos de apoyo al aprendizaje</div>
   <div>Diseño pedagógico y adaptación digital: José Antonio León Juárez <span class="memo-creditos-separador">•</span> Ruta MEMO · Rumbo a la Universidad</div>
+  <div>© 2026 José Antonio León Juárez · EduTech Studio MEMO · Uso educativo y no comercial · Todos los derechos reservados <span class="memo-creditos-separador">•</span> <button class="cmru13-terms-link" type="button" onclick="cmru13AbrirTerminos(true)">Términos de uso</button></div>
 </footer>
 
 <script>
 const STORAGE_KEY='rutasMemoRumboUniversidad_CMRU01a';
-const VERSION='CMRU-12';
+const VERSION='CMRU-13';
 const RUTA_SOLICITADA=(()=>{
   try{
     const valor=new URLSearchParams(window.location.search).get('ruta');
@@ -2724,7 +2846,70 @@ function toggleCreditosMemo(){
 
 function continuarRuta(){const p=alumno.pantallaActual||'dashboard';if(p==='reporteAlumno'){renderReporteAlumno();return mostrarPantalla('reporteAlumno')}if(p==='retoFinal'&&alumno.retoFinal?.estado==='EN CURSO'){return continuarRetoFinal()}if(p==='retoFinalResultado'&&alumno.retoFinal?.resultado){renderResultadoRetoFinal();return mostrarPantalla('retoFinalResultado')}if(p==='retoFinalIntro'){renderRetoFinalIntro();return mostrarPantalla('retoFinalIntro')}if(p==='practicaS1'&&alumno.secciones?.S1?.ultimaHabilidad){habilidadActual=alumno.secciones.S1.ultimaHabilidad;const st=alumno.secciones.S1.skills[habilidadActual];if(st?.currentBlock){renderPractice();return mostrarPantalla('practicaS1')}}if(p==='diagnosticoS1'&&alumno.secciones?.S1?.diagnostico?.current){renderDiag();return mostrarPantalla('diagnosticoS1')}if(p==='practicaS2'&&alumno.secciones?.S2?.ultimaHabilidad){habilidadActualS2=alumno.secciones.S2.ultimaHabilidad;const st=alumno.secciones.S2.skills?.[habilidadActualS2];if(st?.currentBlock){renderPracticeS2();return mostrarPantalla('practicaS2')}}if(p==='diagnosticoS2'&&alumno.secciones?.S2?.diagnostico?.current){renderDiagS2();return mostrarPantalla('diagnosticoS2')}if(p==='practicaS3'&&alumno.secciones?.S3?.ultimaHabilidad){habilidadActualS3=alumno.secciones.S3.ultimaHabilidad;const st=alumno.secciones.S3.skills?.[habilidadActualS3];if(st?.currentBlock){renderPracticeS3();return mostrarPantalla('practicaS3')}}if(p==='diagnosticoS3'&&alumno.secciones?.S3?.diagnostico?.current){renderDiagS3();return mostrarPantalla('diagnosticoS3')}if(p==='practicaS4'&&alumno.secciones?.S4?.ultimaHabilidad){habilidadActualS4=alumno.secciones.S4.ultimaHabilidad;const st=alumno.secciones.S4.skills?.[habilidadActualS4];if(st?.currentBlock){renderPracticeS4();return mostrarPantalla('practicaS4')}}if(p==='diagnosticoS4'&&alumno.secciones?.S4?.diagnostico?.current){renderDiagS4();return mostrarPantalla('diagnosticoS4')}if(p==='practicaS5'&&alumno.secciones?.S5?.ultimaHabilidad){habilidadActualS5=alumno.secciones.S5.ultimaHabilidad;const st=alumno.secciones.S5.skills?.[habilidadActualS5];if(st?.currentBlock){renderPracticeS5();return mostrarPantalla('practicaS5')}}if(p==='diagnosticoS5'&&alumno.secciones?.S5?.diagnostico?.current){renderDiagS5();return mostrarPantalla('diagnosticoS5')}if(p==='practicaS6'&&alumno.secciones?.S6?.ultimaHabilidad){habilidadActualS6=alumno.secciones.S6.ultimaHabilidad;const st=alumno.secciones.S6.skills?.[habilidadActualS6];if(st?.currentBlock){renderPracticeS6();return mostrarPantalla('practicaS6')}}if(p==='diagnosticoS6'&&alumno.secciones?.S6?.diagnostico?.current){renderDiagS6();return mostrarPantalla('diagnosticoS6')}renderDashboard();if(p==='dashboardS1'&&alumno.secciones?.S1?.diagnostico)return abrirDashboardS1();if(p==='dashboardS2'&&alumno.secciones?.S2?.diagnostico)return abrirDashboardS2();if(p==='dashboardS3'&&alumno.secciones?.S3?.diagnostico)return abrirDashboardS3();if(p==='dashboardS4'&&alumno.secciones?.S4?.diagnostico)return abrirDashboardS4();if(p==='dashboardS5'&&alumno.secciones?.S5?.diagnostico)return abrirDashboardS5();if(p==='dashboardS6'&&alumno.secciones?.S6?.diagnostico)return abrirDashboardS6();mostrarPantalla('dashboard')}
 function reiniciarRuta(){if(!confirm('Se eliminará el progreso guardado de este prototipo.'))return;reinicioEnCurso=true;localStorage.removeItem(STORAGE_KEY);location.reload()}
-function bootstrap(){
+
+
+/* ============================================================
+   CMRU-13 · Identidad, origen y términos de uso
+   Capa independiente de la lógica matemática/adaptativa.
+   ============================================================ */
+const CMRU13_TERMS_KEY='rutasMemoRumboUniversidad_Terminos';
+const CMRU13_TERMS_VERSION='1.0';
+let cmru13TerminosDesdeFooter=false;
+function cmru13LeerAceptacion(){
+  try{return JSON.parse(localStorage.getItem(CMRU13_TERMS_KEY)||'null')}catch(e){return null}
+}
+function cmru13TerminosVigentes(){
+  const a=cmru13LeerAceptacion();
+  return !!(a&&a.version===CMRU13_TERMS_VERSION&&a.accepted===true);
+}
+function cmru13Mostrar(id){
+  document.querySelectorAll('.cmru13-overlay').forEach(x=>x.classList.remove('activa'));
+  const el=document.getElementById(id);if(el)el.classList.add('activa');
+  document.body.classList.add('cmru13-bloqueado');
+}
+function cmru13OcultarTodo(){
+  document.querySelectorAll('.cmru13-overlay').forEach(x=>x.classList.remove('activa'));
+  document.body.classList.remove('cmru13-bloqueado');
+}
+function cmru13AbrirOrigen(){cmru13Mostrar('cmru13Origen')}
+function cmru13ContinuarATerminos(){
+  cmru13TerminosDesdeFooter=false;
+  const cerrar=document.getElementById('cmru13CerrarTerminos');if(cerrar)cerrar.classList.remove('visible');
+  const check=document.getElementById('cmru13Acepto');if(check)check.checked=false;
+  cmru13ActualizarBoton();
+  cmru13Mostrar('cmru13Terminos');
+}
+function cmru13AbrirTerminos(desdeFooter){
+  cmru13TerminosDesdeFooter=!!desdeFooter;
+  const cerrar=document.getElementById('cmru13CerrarTerminos');
+  if(cerrar)cerrar.classList.toggle('visible',cmru13TerminosDesdeFooter&&cmru13TerminosVigentes());
+  const wrap=document.getElementById('cmru13CheckWrap');
+  const btn=document.getElementById('cmru13AceptarBtn');
+  const check=document.getElementById('cmru13Acepto');
+  const yaAceptados=cmru13TerminosVigentes();
+  if(wrap)wrap.style.display=(desdeFooter&&yaAceptados)?'none':'flex';
+  if(btn)btn.style.display=(desdeFooter&&yaAceptados)?'none':'';
+  if(check&&!yaAceptados)check.checked=false;
+  cmru13ActualizarBoton();
+  cmru13Mostrar('cmru13Terminos');
+}
+function cmru13CerrarTerminos(){
+  if(cmru13TerminosDesdeFooter&&cmru13TerminosVigentes())cmru13OcultarTodo();
+}
+function cmru13ActualizarBoton(){
+  const check=document.getElementById('cmru13Acepto');
+  const btn=document.getElementById('cmru13AceptarBtn');
+  if(btn)btn.disabled=!(check&&check.checked);
+}
+function cmru13AceptarTerminos(){
+  const check=document.getElementById('cmru13Acepto');
+  if(!check||!check.checked)return;
+  const registro={accepted:true,version:CMRU13_TERMS_VERSION,acceptedAt:new Date().toISOString()};
+  try{localStorage.setItem(CMRU13_TERMS_KEY,JSON.stringify(registro))}catch(e){console.warn('No fue posible guardar la aceptación local de términos.',e)}
+  cmru13OcultarTodo();
+  cmru13BootstrapRuta();
+}
+function cmru13BootstrapRuta(){
  const rutaMsg=document.getElementById('rutaSolicitadaMsg');
  if(RUTA_SOLICITADA&&rutaMsg){
    rutaMsg.classList.add('show');
@@ -2748,6 +2933,10 @@ function bootstrap(){
      }
    }catch(e){console.warn(e)}
  }
+}
+function bootstrap(){
+  if(!cmru13TerminosVigentes()){cmru13AbrirOrigen();return}
+  cmru13BootstrapRuta();
 }
 window.addEventListener('pagehide',()=>save());document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')save()});bootstrap();
 </script>
