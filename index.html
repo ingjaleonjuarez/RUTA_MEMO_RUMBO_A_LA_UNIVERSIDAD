@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--
   CMRU-13 · Rutas MEMO · Rumbo a la Universidad
+  CMRU-13a · Contacto público para estudiantes y docentes
   © 2026 José Antonio León Juárez · EduTech Studio MEMO.
   Uso educativo y no comercial. Todos los derechos reservados.
   No se autoriza la venta, reventa, redistribución comercial, eliminación de créditos
@@ -449,6 +450,15 @@ hr{border:0;border-top:1px solid var(--borde);margin:20px 0}
   min-width:0!important;font:inherit!important;box-shadow:none!important
 }
 .cmru13-terms-link:hover{color:#fff!important;background:transparent!important}
+
+.cmru13-contacto{
+  margin:16px 0 4px;padding:14px 16px;border-radius:14px;
+  background:#fffaf0;border:1px solid rgba(195,154,59,.42);color:#344954
+}
+.cmru13-contacto strong{color:#163b52}
+.cmru13-contacto a{color:#163b52;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.memo-contact-link{color:rgba(255,255,255,.95)!important;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.memo-contact-link:hover{color:#fff!important}
 body.cmru13-bloqueado{overflow:hidden}
 @media(max-width:680px){
   .cmru13-overlay{padding:10px}.cmru13-panel{border-radius:18px;padding:22px 18px}
@@ -510,6 +520,9 @@ body.cmru13-bloqueado{overflow:hidden}
       </div>
     </div>
     <div class="notice"><strong>Recuerda.</strong> Esta ruta es una herramienta de <strong>acompañamiento, nivelación y práctica</strong>. Sus resultados no constituyen una certificación de dominio ni predicen el ingreso a una universidad.</div>
+    <div class="cmru13-contacto">
+      <strong>Contacto con el proyecto.</strong> Rutas MEMO se ofrece para su uso educativo y de acompañamiento. Si eres estudiante o docente y deseas compartir tu experiencia, realizar una consulta, proponer una colaboración o solicitar información sobre el proyecto, puedes escribir a <a href="mailto:ingjaleonjuarez@gmail.com">ingjaleonjuarez@gmail.com</a>.
+    </div>
     <label id="cmru13CheckWrap" class="cmru13-check" for="cmru13Acepto">
       <input id="cmru13Acepto" type="checkbox" onchange="cmru13ActualizarBoton()">
       <span><strong>He leído y acepto los términos de uso de Rutas MEMO.</strong></span>
@@ -1213,7 +1226,7 @@ body.cmru13-bloqueado{overflow:hidden}
 <footer class="memo-creditos-globales" aria-label="Cintilla de identidad MEMO">
   <div>Sistemas inteligentes y adaptativos de apoyo al aprendizaje</div>
   <div>Diseño pedagógico y adaptación digital: José Antonio León Juárez <span class="memo-creditos-separador">•</span> Ruta MEMO · Rumbo a la Universidad</div>
-  <div>© 2026 José Antonio León Juárez · EduTech Studio MEMO · Uso educativo y no comercial · Todos los derechos reservados <span class="memo-creditos-separador">•</span> <button class="cmru13-terms-link" type="button" onclick="cmru13AbrirTerminos(true)">Términos de uso</button></div>
+  <div>© 2026 José Antonio León Juárez · EduTech Studio MEMO · Uso educativo y no comercial · Todos los derechos reservados <span class="memo-creditos-separador">•</span> <a class="memo-contact-link" href="mailto:ingjaleonjuarez@gmail.com">ingjaleonjuarez@gmail.com</a> <span class="memo-creditos-separador">•</span> <button class="cmru13-terms-link" type="button" onclick="cmru13AbrirTerminos(true)">Términos de uso</button></div>
 </footer>
 
 <script>
